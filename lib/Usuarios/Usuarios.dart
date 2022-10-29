@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_automoviles/Provedores/widgetaddProvedores.dart';
-import 'package:flutter_automoviles/Lotes/widgetdelete.dart';
+import 'package:flutter_automoviles/Usuarios/widgetadd.dart';
+import 'package:flutter_automoviles/Usuarios/widgetdelete.dart';
 
-class Provedores extends StatelessWidget{
+class Usuarios extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text("Provedores"),),
+      appBar: AppBar(title: Text("Usuarios"),),
       body: Center(
         child: Center(
           child: Padding(
@@ -25,28 +25,32 @@ class Provedores extends StatelessWidget{
                           defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                           border: TableBorder.all(),
                           children: [
-                            TableRow(
-                                children: [
+                            const TableRow(
+                            children: [
 
-                                  Text("Provedor"),
-                                  Text("Ciudad"),
-                                  Text("Estado"),
-                                  Text("Accion"),
-                                ]
-                            ),
+                              Text("Nombre",textAlign: TextAlign.center,),
+                              Text("Usuario",textAlign: TextAlign.center,),
+                              Text("Apellido P.",textAlign: TextAlign.center,),
+                              Text("Apellido M.",textAlign: TextAlign.center,),
+                              Text("Fecha Nacimiento",textAlign: TextAlign.center,),
+                              Text("Accion",textAlign: TextAlign.center,),
+                            ]
+                          ),
                             TableRow(
                                 children: [
-                                  Text("Provedor 1"),
-                                  Text("Torreon"),
-                                  Text("Coahuila"),
+                                  const Text("Diego", textAlign: TextAlign.center,),
+                                  const Text("dduenez", textAlign: TextAlign.center,),
+                                  const Text("Dueñez", textAlign: TextAlign.center,),
+                                  const Text("Villa", textAlign: TextAlign.center,),
+                                  const Text("30/09/2002",  textAlign: TextAlign.center,),
                                   SizedBox(
                                     width: 30,
                                     height: 30,
                                     child: ElevatedButton.icon(
 
-                                      onPressed: (){
+                                        onPressed: (){
                                         showModalBottomSheet(context: context, builder: (BuildContext context){
-                                          return Delete();
+                                        return Delete();
 
                                         }
                                         );
@@ -54,26 +58,27 @@ class Provedores extends StatelessWidget{
                                       icon: Icon(Icons.delete,color: Colors.black,),  //icon data for elevated button
                                       label: Text(""),
                                       style: ElevatedButton.styleFrom(
-                                        primary: Colors.redAccent,
-                                        //elevated btton background color
+                                          primary: Colors.redAccent,
                                       ),
-                                      //label text
                                     ),
+                                    
                                   )                  ]
                             ),
                             TableRow(
                                 children: [
-                                  Text("Provedor 2"),
-                                  Text("Gomez"),
-                                  Text("Gomez"),
+                                  const Text("Brayan", textAlign: TextAlign.center,),
+                                  const Text("bromero", textAlign: TextAlign.center,),
+                                  const Text("Romero", textAlign: TextAlign.center,),
+                                  const Text("Gandara", textAlign: TextAlign.center,),
+                                  const Text("10/10/2000",  textAlign: TextAlign.center,),
                                   SizedBox(
                                     width: 30,
                                     height: 30,
                                     child: ElevatedButton.icon(
 
-                                      onPressed: (){
+                                        onPressed: (){
                                         showModalBottomSheet(context: context, builder: (BuildContext context){
-                                          return Delete();
+                                        return Delete();
 
                                         }
                                         );
@@ -81,28 +86,27 @@ class Provedores extends StatelessWidget{
                                       icon: Icon(Icons.delete,color: Colors.black,),  //icon data for elevated button
                                       label: Text(""),
                                       style: ElevatedButton.styleFrom(
-                                        primary: Colors.redAccent,
-                                        //elevated btton background color
+                                          primary: Colors.redAccent,
                                       ),
-                                      //label text
                                     ),
-                                  ),
-
-                                ]
+                                    
+                                  )                  ]
                             ),
                             TableRow(
                                 children: [
-                                  Text("Provedor 3"),
-                                  Text("Lerdo"),
-                                  Text("Durango"),
+                                  const Text("Francisco", textAlign: TextAlign.center,),
+                                  const Text("fescobedo", textAlign: TextAlign.center,),
+                                  const Text("Escobedo", textAlign: TextAlign.center,),
+                                  const Text("Salazar", textAlign: TextAlign.center,),
+                                  const Text("20/05/2000",  textAlign: TextAlign.center,),
                                   SizedBox(
                                     width: 30,
                                     height: 30,
                                     child: ElevatedButton.icon(
 
-                                      onPressed: (){
+                                        onPressed: (){
                                         showModalBottomSheet(context: context, builder: (BuildContext context){
-                                          return Delete();
+                                        return Delete();
 
                                         }
                                         );
@@ -110,13 +114,11 @@ class Provedores extends StatelessWidget{
                                       icon: Icon(Icons.delete,color: Colors.black,),  //icon data for elevated button
                                       label: Text(""),
                                       style: ElevatedButton.styleFrom(
-                                        primary: Colors.redAccent,
-                                        //elevated btton background color
+                                          primary: Colors.redAccent,
                                       ),
-                                      //label text
                                     ),
-                                  )
-                                ]
+                                    
+                                  )                  ]
                             ),
                           ],
                         ),

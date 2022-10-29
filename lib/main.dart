@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_automoviles/Lotes/Lotes.dart';
-import 'package:flutter_automoviles/Provedores/Provedores.dart';
+import 'package:flutter_automoviles/Usuarios/Usuarios.dart';
+import 'package:flutter_automoviles/Sucursales/Sucursales.dart';
 import 'package:flutter/services.dart';
 void main() {
   runApp(const MyApp());
@@ -73,15 +73,17 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(title: Text("Lote"),),
+      appBar: AppBar(title: Text("Menu"),),
       body: Center(child:
-      ElevatedButton(child: const Text("Lotes"),
+      ElevatedButton(child: const Text("Usuarios"),
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> Lotes()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> Sucursales()));
         },
 
       )
         ,),
+
+        
     );
 
   }

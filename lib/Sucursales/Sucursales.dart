@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_automoviles/Lotes/widgetadd.dart';
-import 'package:flutter_automoviles/Lotes/widgetdelete.dart';
+import 'package:flutter_automoviles/Sucursales/widgetadd.dart';
+import 'package:flutter_automoviles/Sucursales/widgetdelete.dart';
 
-class Lotes extends StatelessWidget{
+class Sucursales extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text("Lotes"),),
+      appBar: AppBar(title: Text("Sucursales"),),
       body: Center(
         child: Center(
           child: Padding(
@@ -25,47 +25,26 @@ class Lotes extends StatelessWidget{
                           defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                           border: TableBorder.all(),
                           children: [
-                            TableRow(
-                            children: [
-
-                              Text("lote"),
-                              Text("Capacidad"),
-                              Text("Sucursal"),
-                              Text("Accion"),
-                            ]
-                          ),
-                            TableRow(
+                            const TableRow(
                                 children: [
-                                  Text("lote 1"),
-                                  Text("400"),
-                                  Text("Gomez"),
-                                  SizedBox(
-                                    width: 30,
-                                    height: 30,
-                                    child: ElevatedButton.icon(
 
-                                        onPressed: (){
-                                        showModalBottomSheet(context: context, builder: (BuildContext context){
-                                        return Delete();
-
-                                        }
-                                        );
-                                      },
-                                      icon: Icon(Icons.delete,color: Colors.black,),  //icon data for elevated button
-                                      label: Text(""),
-                                      style: ElevatedButton.styleFrom(
-                                          primary: Colors.redAccent,
-                                         //elevated btton background color
-                                      ),
-                                      //label text
-                                    ),
-                                  )                  ]
+                                  Text("Nombre de sucursal", textAlign: TextAlign.center),
+                                  Text("Dirección", textAlign: TextAlign.center),
+                                  Text("C.P.", textAlign: TextAlign.center),
+                                  Text("Número exterior", textAlign: TextAlign.center),
+                                  Text("Ciudad", textAlign: TextAlign.center),
+                                  Text("Estado", textAlign: TextAlign.center),
+                                  Text("Accion", textAlign: TextAlign.center),
+                                ]
                             ),
                             TableRow(
                                 children: [
-                                  Text("lote 2"),
-                                  Text("400"),
-                                  Text("Gomez"),
+                                  const Text("Sucursal 1", textAlign: TextAlign.center),
+                                  const Text("Calle La Rioja", textAlign: TextAlign.center),
+                                  const Text("91833", textAlign: TextAlign.center),
+                                  const Text("#1345", textAlign: TextAlign.center),
+                                  const Text("Torreón", textAlign: TextAlign.center),
+                                  const Text("Coahuila", textAlign: TextAlign.center),
                                   SizedBox(
                                     width: 30,
                                     height: 30,
@@ -73,7 +52,37 @@ class Lotes extends StatelessWidget{
 
                                       onPressed: (){
                                         showModalBottomSheet(context: context, builder: (BuildContext context){
-                                       return Delete();
+                                          return Delete();
+
+                                        }
+                                        );
+                                      },
+                                      icon: Icon(Icons.delete,color: Colors.black,),  //icon data for elevated button
+                                      label: Text(""),
+                                      style: ElevatedButton.styleFrom(
+                                        primary: Colors.redAccent,
+                                        //elevated btton background color
+                                      ),
+                                      //label text
+                                    ),
+                                  )                  ]
+                            ),
+                            TableRow(
+                                children: [
+                                  const Text("Sucursal 1", textAlign: TextAlign.center),
+                                  const Text("Calle La Rioja", textAlign: TextAlign.center),
+                                  const Text("91833", textAlign: TextAlign.center),
+                                  const Text("#1345", textAlign: TextAlign.center),
+                                  const Text("Torreón", textAlign: TextAlign.center),
+                                  const Text("Coahuila", textAlign: TextAlign.center),
+                                  SizedBox(
+                                    width: 30,
+                                    height: 30,
+                                    child: ElevatedButton.icon(
+
+                                      onPressed: (){
+                                        showModalBottomSheet(context: context, builder: (BuildContext context){
+                                          return Delete();
 
                                         }
                                         );
@@ -92,9 +101,12 @@ class Lotes extends StatelessWidget{
                             ),
                             TableRow(
                                 children: [
-                                  Text("lote 3"),
-                                  Text("400"),
-                                  Text("Gomez"),
+                                  const Text("Sucursal 1", textAlign: TextAlign.center),
+                                  const Text("Calle La Rioja", textAlign: TextAlign.center),
+                                  const Text("91833", textAlign: TextAlign.center),
+                                  const Text("#1345", textAlign: TextAlign.center),
+                                  const Text("Torreón", textAlign: TextAlign.center),
+                                  const Text("Coahuila", textAlign: TextAlign.center),
                                   SizedBox(
                                     width: 30,
                                     height: 30,

@@ -1,8 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+String dropdownvalue = 'Item 1';
 
-var text = "Provedor";
+// List of items in our dropdown menu
+var items = [
+  'Item 1',
+  'Item 2',
+  'Item 3',
+  'Item 4',
+  'Item 5',
+];
+var text = "Sucursal";
 Widget Add()
 {
   return  Container(
@@ -11,47 +20,66 @@ Widget Add()
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Nuevo Provedor",textAlign: TextAlign.center),
+        Text("Nueva sucursal",textAlign: TextAlign.center),
 
-      TextField(
+      const TextField(
         decoration:InputDecoration(
           border: OutlineInputBorder(),
-          labelText: "Nombre del provedor",
+          labelText: "Nombre de sucursal",
 
         ) ,
       ),
 
-        TextField(
+        const TextField(
           decoration:InputDecoration(
             border: OutlineInputBorder(),
-            labelText: "Dirrecion",
+            labelText: "Dirección",
 
-          ) ,),
-        TextField(
+          ) 
+          ,),
+        const TextField(
           decoration:InputDecoration(
             border: OutlineInputBorder(),
-            labelText: "Codigo Postal",
+            labelText: "C.P.",
 
-          ) ,),
-        TextField(
+          ) 
+          ,),
+           const TextField(
           decoration:InputDecoration(
             border: OutlineInputBorder(),
-            labelText: "Numero exterior",
+            labelText: "Número exterior",
 
-          ) ,),
-        TextField(
+          ) 
+          ,),
+            const TextField(
           decoration:InputDecoration(
             border: OutlineInputBorder(),
             labelText: "Ciudad",
 
-          ) ,),
-        TextField(
+          ) 
+          ,),
+          const TextField(
           decoration:InputDecoration(
             border: OutlineInputBorder(),
             labelText: "Estado",
 
-          ) ,),
-
+          ) 
+          ,),
+          
+       Row(
+         children: [
+           Text(text),
+           DropdownButton<String>(
+             items: <String>['A', 'B', 'C', 'D'].map((String value) {
+               return DropdownMenuItem<String>(
+                 value: value,
+                 child: Text(value),
+               );
+             }).toList(),
+             onChanged: (_) {},
+           )
+         ],
+       ),
         Row(
 
             mainAxisAlignment: MainAxisAlignment.end,

@@ -1,56 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-String dropdownvalue = 'Item 1';
-
-// List of items in our dropdown menu
-var items = [
-  'Item 1',
-  'Item 2',
-  'Item 3',
-  'Item 4',
-  'Item 5',
-];
-var text = "Sucursal";
-Widget Add()
+Widget Delete()
 {
   return  Container(
 
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text("Nuevo Lote",textAlign: TextAlign.center),
+        Text("Deseas eliminar?",textAlign: TextAlign.center),
 
-      TextField(
-        decoration:InputDecoration(
-          border: OutlineInputBorder(),
-          labelText: "Nombre del lote",
 
-        ) ,
-      ),
 
-        TextField(
-          decoration:InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: "Capacidad",
-
-          ) ,),
-
-       Row(
-         children: [
-           Text(text),
-           DropdownButton<String>(
-             items: <String>['A', 'B', 'C', 'D'].map((String value) {
-               return DropdownMenuItem<String>(
-                 value: value,
-                 child: Text(value),
-               );
-             }).toList(),
-             onChanged: (_) {},
-           )
-         ],
-       ),
         Row(
 
             mainAxisAlignment: MainAxisAlignment.end,
@@ -61,7 +23,7 @@ Widget Add()
                 child: SizedBox(
 
                   child: ElevatedButton(
-                    child: const Text("Agregar"),
+                    child: const Text("Aceptar"),
                     onPressed: (){
                     },
                     style: ElevatedButton.styleFrom(
@@ -70,8 +32,9 @@ Widget Add()
                   ),
                 ),
               ),
-              Text('', textAlign: TextAlign.center),
-
+              Expanded(
+                child: Text('', textAlign: TextAlign.center),
+              ),
               Expanded(
                 child:SizedBox(
                   child: ElevatedButton(
@@ -89,12 +52,6 @@ Widget Add()
 
 
         ),
-
-
-
-
-
-
       ],
     ),
   );
